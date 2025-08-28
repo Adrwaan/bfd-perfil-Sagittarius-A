@@ -49,6 +49,13 @@ body {
   background-color: #000;
 }
 
+@media (max-width: 480px) {
+  main {
+    min-width: 100vw;
+    padding: 0.5rem 0;
+  }
+}
+
 main {
   width: 70vw;
   height: max-content;
@@ -165,6 +172,13 @@ section details figure img {
   border-radius: 8px;
 }
 
+section details figure figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+
+  color: #000;
+}
+
 section details ul {
   list-style: none;
   padding: 0.5rem 0 1rem 1rem;
@@ -186,4 +200,13 @@ section details ul li a {
 
 section details ul li a:hover {
   color: rgba(255 94 1 / 1);
+}
+
+section:nth-child(7) details details {
+  margin: 0.5rem 0;
+}
+
+section details details:open {
+  border: 1px solid #666;
+  border-radius: 4px;
 }
