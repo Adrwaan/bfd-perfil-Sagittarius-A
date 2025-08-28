@@ -118,6 +118,17 @@ section {
 
   border: 1px solid #ccc;
   border-radius: 0.25rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+section:hover {
+  background-color: rgba(255 94 1 / 0.85);
+  border-color: rgb(102 37 0);
+}
+
+section:has(details[open]) {
+  background: #fef;
 }
 
 section details {
@@ -136,10 +147,6 @@ section details {
 section details > summary {
   font-weight: 600;
   list-style-type: "> ";
-}
-
-section:has(details[open]) {
-  background: #fef;
 }
 
 section details p {
