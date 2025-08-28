@@ -10,3 +10,16 @@ window.addEventListener("resize", () => {
   particles.canvas.el.height = window.innerHeight;
   particles.fn.particlesDraw();
 });
+
+const curiositiesDetails = document.getElementById("curiosities-details");
+const allDetailsInCuriosities = document.querySelectorAll(
+  "#curiosities-details details"
+);
+
+curiositiesDetails.addEventListener("toggle", () => {
+  if (!curiositiesDetails.open) {
+    allDetailsInCuriosities.forEach((node) => {
+      if (node.open) node.removeAttribute("open");
+    });
+  }
+});
